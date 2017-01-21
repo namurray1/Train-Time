@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>Train Time</title>
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+		<div class="container">
+        <!--JUMBOTRON-->
+        <div class="jumbotron" style="background: #6A8455 ; color: white;">
+
+            <!-- Added "glyphicon glyphicon-list-alt" to the heading-->
+            <h1 class="text-center"><span class = "glyphicon glyphicon-list-alt"></span><strong>Train Time</strong></h1>
+        </div>
+        <div class="row">
+
+            <!--DATA DISPLAY PANEL-->
+            <div class="col-sm-12">
+                <br>
+                <div class="panel panel-primary" style="border-color:#6A8455 ;">
+                    <div class="panel-heading" style="background-color: #324F17 ;">
+                        <h2 class="panel-title"><strong>Current Train Schedule</strong></h2>
+           			</div>
+                    <div class="panel-body" id="currentEmployees">
+                        <h2 id="name-display"></h2>
+                        <h4 id="role-display"></h4>
+                        <h4 id="start-date"></h4>
+                        <h4 id="hourly-rate"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <br>
+                <div class="panel panel-primary" style="border-color:#6A8455 ">
+                    <div class="panel-heading" style="background-color: #324F17 ;">
+                        <h2 class="panel-title"><strong>Add Train</strong></h2>
+      													
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+
+                            <!--added "has-success", a Bootstrap property to all imput fields that gives a nice green glow.-->
+                            <div class="form-group has-success">
+                                <label for="train-name">Train Name</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group has-success">
+                                <label for="destination">Destination</label>
+                                <input type="text" class="form-control" id="role">
+                            </div>
+                            <div class="form-group has-success">
+                                <label for="startDate">First Train Time (mm/dd/yyyy)</label>
+                                <input type="date" class="form-control" id="startDate">
+                            </div>
+                            <div class="form-group has-success">
+                                <label for="hourlyRate">Frequency (min)</label>
+                                <input type="number" class="form-control" id="hourlyRate">
+                            </div>
+                            <button type="submit" class="btn btn-default" id="runSearch">Update</button>
+                            <button type="button" class="btn btn-default" id="clearAll">Remove</button>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+
+</body>
+</html>

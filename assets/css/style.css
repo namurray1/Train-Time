@@ -1,0 +1,19 @@
+.btn:hover {
+        background-color: #324F17 !important;
+        color: white !important;
+        outline-style: none;
+    }
+    
+    .btn {
+        background-color: #6A8455 !important;
+        color: white !important;
+        outline-style: none;
+    }
+    
+    span {
+        margin-right: 20px;
+    }
+    
+    button:focus {
+        outline: 0 !important;
+    }
