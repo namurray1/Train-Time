@@ -9,24 +9,24 @@
         firebase.initializeApp(config);
 
     var database = firebase.database();
-        var name = "";
-        var role = "";
-        var startDate = "";
-        var hourlyRate = "";
+        var trainName = "";
+        var destination = "";
+        var nextArrival = "";
+        var minutesAway = "";
 
 
         //Capture user inputs and store into variables
         $("#runSearch").on("click", function() {
-            name = $("#name").val().trim();
-            role = $("#role").val().trim();
-            startDate = $("#startDate").val().trim();
-            hourlyRate = $("#hourlyRate").val().trim();
+            trainName = $("#trainName").val().trim();
+            destination = $("#destination").val().trim();
+            nextArrival = $("#nextArrival").val().trim();
+            minutesAway = $("#minutesAway").val().trim();
 
             database.ref().push({
-                name: name,
-                role: role,
-                startDate: startDate,
-                hourlyRate: hourlyRate,
+                trainName: trainName,
+                destination: destination,
+                nextArrival: nextArrival,
+                minutesAway: minutesAway,
                 dateAdded: firebase.database.ServerValue.TIMESTAMP
             });
 
@@ -34,10 +34,10 @@
         
         });
          database.ref().on("child_added", function(childSnapshot) {
-            console.log(childSnapshot.val().name);
-            console.log(childSnapshot.val().role);
-            console.log(childSnapshot.val().startDate);
-            console.log(childSnapshot.val().hourlyRate);
+            console.log(childSnapshot.val().trainName);
+            console.log(childSnapshot.val().destination);
+            console.log(childSnapshot.val().nextArrival);
+            console.log(childSnapshot.val().minutesAway);
 
         });
 
@@ -45,28 +45,28 @@
             $("#runSearch").on("click", function(event) {
             // don't refresh the page
             event.preventDefault();
-            // Replaces the content in the "currentEmployees" div
-            $("#currentEmployees").empty();
+            // Replaces the content in the "currentTrainSchedule" div
+            $("#currentTrainSchedule").empty();
 
             // Output all of the new information into the relevant sections
-            $("#currentEmployees").append("<h1>" + name);
-            $("#currentEmployees").append("<h4>" + role);
-            $("#currentEmployees").append("<h4>" + startDate);
-            $("#currentEmployees").append("<h4>" + hourlyRate);
+            $("#currentTrainSchedule").append("<h1>" + trainName);
+            $("#currentTrainSchedule").append("<h4>" + destination);
+            $("#currentTrainSchedule").append("<h4>" + nextArrival);
+            $("#currentTrainSchedule").append("<h4>" + minutesAway);
 
             // Clear sessionStorage
             sessionStorage.clear();
 
             // Store all content into sessionStorage
-            sessionStorage.setItem("name", name);
-            sessionStorage.setItem("role", role);
-            sessionStorage.setItem("startDate", startDate);
-            sessionStorage.setItem("hourlyRate", hourlyRate);
+            sessionStorage.setItem("trainName", trainName);
+            sessionStorage.setItem("destination", destination);
+            sessionStorage.setItem("nextArrival", nextArrival);
+            sessionStorage.setItem("minutesAway", minutesAway);
             });
 
             // By default display the content from sessionStorage
-            $("#currentEmployees").empty();
-            $("#currentEmployees").append("<h2>" + sessionStorage.getItem("name"));
-            $("#currentEmployees").append("<h4>" + sessionStorage.getItem("role"));
-            $("#currentEmployees").append("<h4>" + sessionStorage.getItem("startDate"));
-            $("#currentEmployees").append("<h4>" + sessionStorage.getItem("hourlyRate"));
+            $("#currentTrainSchedule").empty();
+            $("#currentTrainSchedule").append("<h2>" + sessionStorage.getItem("trainName"));
+            $("#currentTrainSchedule").append("<h4>" + sessionStorage.getItem("destination"));
+            $("#currentTrainSchedule").append("<h4>" + sessionStorage.getItem("nextArrival"));
+            $("#currentTrainSchedule").append("<h4>" + sessionStorage.getItem("minutesAway"));
