@@ -48,7 +48,7 @@
             // Replaces the content in the "currentTrainSchedule" div
             $("#currentTrainSchedule").empty();
 
-            // Output all of the new information into the relevant sections
+            // Output all of the new information into the Current Train Schedule section
             $("#currentTrainSchedule").append("<h1>" + trainName);
             $("#currentTrainSchedule").append("<h4>" + destination);
             $("#currentTrainSchedule").append("<h4>" + nextArrival);

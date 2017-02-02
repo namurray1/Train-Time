@@ -1,11 +1,11 @@
 .btn:hover {
-        background-color: #324F17 !important;
+        background-color: #8080ff !important;
         color: white !important;
         outline-style: none;
     }
     
     .btn {
-        background-color: #6A8455 !important;
+        background-color: #000099 !important;
         color: white !important;
         outline-style: none;
     }
