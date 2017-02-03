@@ -1,19 +1,29 @@
-.btn:hover {
-        background-color: #8080ff !important;
-        color: white !important;
-        outline-style: none;
-    }
-    
-    .btn {
-        background-color: #000099 !important;
-        color: white !important;
-        outline-style: none;
-    }
-    
-    span {
-        margin-right: 20px;
-    }
-    
-    button:focus {
-        outline: 0 !important;
-    }
+.btn:hover
+{
+    color: white !important;
+    outline-style: none;
+    background-color: #8080ff !important;
+}
+
+.btn
+{
+    color: white !important;
+    outline-style: none;
+    background-color: #009 !important;
+}
+
+/*span
+{
+    margin-right: 20px;
+}*/
+
+button:focus
+{
+    outline: 0 !important;
+}
+/*Train information row*/
+.table tr:nth-child(even)
+{
+    background-color: #ddd;
+}
+

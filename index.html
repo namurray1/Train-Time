@@ -1,34 +1,93 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <title>Train Time</title>
     <!--BOOTSTRAP-->
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link href="css/bootstrap.icon-large.min.css" rel="stylesheet">
 </head>
+
 <body>
-		<div class="container">
+    <div class="container">
         <!--JUMBOTRON-->
         <div class="jumbotron" style="background: #000099; color: white;">
-
             <!-- Added "glyphicon glyphicon-list-alt" to the heading-->
             <h1 class="text-center"><strong>Train Time</strong></h1>
         </div>
         <div class="row">
-
             <!--DATA DISPLAY PANEL-->
             <div class="col-sm-12">
                 <br>
                 <div class="panel panel-primary" style="border-color: #000099;">
                     <div class="panel-heading" style="background-color: #8080ff;">
                         <h2 class="panel-title"><strong>Current Train Schedule</strong></h2>
-           			</div>
-                    <div class="panel-body" id="trains">
-                        <h2 id="trainName-display"></h2>
-                        <h4 id="destination-display"></h4>
-                        <h4 id="nextArrival"></h4>
-                        <h4 id="minutesAway"></h4>
+                    </div>
+                    <div class="panel-body">
+                        <!--Tabel goes here-->
+                        <table class="table">
+                            <tr>
+                                <th>Train Name</th>
+                                <th>Destination</th>
+                                <th>Frequency (min)</th>
+                                <th>Next Arrival</th>
+                                <th>Minutes Away</th>
+                            </tr>
+                            <tr>
+                                <td>Cresent</td>
+                                <td>Kannapolis</td>
+                                <td>60</td>
+                                <td>11:28 AM</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Palmetto</td>
+                                <td>High Point</td>
+                                <td>120</td>
+                                <td>08:38 AM</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Piedmont</td>
+                                <td>Greensboro</td>
+                                <td>130</td>
+                                <td>08:21 AM</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Carolinian</td>
+                                <td>Raleigh</td>
+                                <td>270</td>
+                                <td>06:45 AM</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Silver Star</td>
+                                <td>Cary</td>
+                                <td>240</td>
+                                <td>06:58 AM</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Silver Meteor</td>
+                                <td>Washington, DC</td>
+                                <td>720</td>
+                                <td>05:53 PM</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Silver Bullet</td>
+                                <td>New York</td>
+                                <td>840</td>
+                                <td>04:39 PM</td>
+                                <td>0</td>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -39,38 +98,35 @@
                 <div class="panel panel-primary" style="border-color:#000099;">
                     <div class="panel-heading" style="background-color: #8080ff;">
                         <h2 class="panel-title"><strong>Add Train</strong></h2>
-      													
                     </div>
                     <div class="panel-body">
                         <form role="form">
-
                             <!--added "has-success", a Bootstrap property to all imput fields that gives a nice green glow.-->
-                            <div class="form-group has-success">
+                            <div class="form-group">
                                 <label for="train-name">Train Name</label>
                                 <input type="text" class="form-control" id="trainName">
                             </div>
-                            <div class="form-group has-success">
+                            <div class="form-group">
                                 <label for="destination">Destination</label>
                                 <input type="text" class="form-control" id="destination">
                             </div>
-                            <div class="form-group has-success">
+                            <div class="form-group">
                                 <label for="firstTrainTime">First Train Time (mm/dd/yyyy)</label>
                                 <input type="date" class="form-control" id="firstTrainTime">
                             </div>
-                            <div class="form-group has-success">
+                            <div class="form-group">
                                 <label for="frequency">Frequency (min)</label>
                                 <input type="number" class="form-control" id="frequency">
                             </div>
                             <button type="submit" class="btn btn-default" id="runSearch">Update</button>
                             <button type="button" class="btn btn-default" id="clearAll">Remove</button>
-
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-		<script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://code.jquery.com/jquery.js"></script>
         <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
-
 </body>
+
 </html>
