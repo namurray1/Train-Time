@@ -1,29 +1,87 @@
-.btn:hover
-{
-    color: white !important;
-    outline-style: none;
-    background-color: #8080ff !important;
-}
-
-.btn
-{
-    color: white !important;
-    outline-style: none;
-    background-color: #009 !important;
-}
-
 /*span
 {
     margin-right: 20px;
 }*/
 
-button:focus
-{
-    outline: 0 !important;
-}
+
 /*Train information row*/
-.table tr:nth-child(even)
+
+/*Buttons*/
+button#runSearch.btn.btn-default
 {
-    background-color: #ddd;
+    font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+    font-size: 16px;
+
+    padding: 7px 14px;
+
+    vertical-align: middle;
+    text-decoration: none;
+
+    color: #fff;
+    border-top: 1px solid #eeedf5;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
+    background: #65a9d7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#191b57), to(#65a9d7));
+    background: -webkit-linear-gradient(top, #191b57, #65a9d7);
+    background:    -moz-linear-gradient(top, #191b57, #65a9d7);
+    background:     -ms-linear-gradient(top, #191b57, #65a9d7);
+    background:      -o-linear-gradient(top, #191b57, #65a9d7);
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+       -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+            box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+}
+button#runSearch.btn.btn-default:hover
+{
+    color: #c0c2db;
+    border-top-color: #0a1066;
+    background: #0a1066;
+}
+button#runSearch.btn.btn-default:active
+{
+    border-top-color: #3128de;
+    background: #3128de;
 }
 
+
+
+
+button#clearAll.btn.btn-default
+{
+    font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+    font-size: 16px;
+
+    padding: 7px 14px;
+
+    vertical-align: middle;
+    text-decoration: none;
+
+    color: #fff;
+    border-top: 1px solid #eeedf5;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
+    background: #65a9d7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#191b57), to(#65a9d7));
+    background: -webkit-linear-gradient(top, #191b57, #65a9d7);
+    background:    -moz-linear-gradient(top, #191b57, #65a9d7);
+    background:     -ms-linear-gradient(top, #191b57, #65a9d7);
+    background:      -o-linear-gradient(top, #191b57, #65a9d7);
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+       -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+            box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+}
+button#clearAll.btn.btn-default:hover
+{
+    color: #c0c2db;
+    border-top-color: #0a1066;
+    background: #0a1066;
+}
+button#clearAll.btn.btn-default:active
+{
+    border-top-color: #3128de;
+    background: #3128de;
+}
