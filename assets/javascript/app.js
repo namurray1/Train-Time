@@ -32,10 +32,11 @@ $("#runSearch").on("click", function() {
 
     trainName = $("#trainName").val().trim();
     destination = $("#destination").val().trim();
+    firstTrainTime = $("#firstTrainTime").val();
     frequency = $("#frequency").val().trim();
     // nextArrival = $("#nextArrival").val().trim();
     // minutesAway = $("#minutesAway").val().trim();
-    firstTrainTime = $("#firstTrainTime").val()
+    
 
     // console.log(trainName)
     // console.log(destination)
