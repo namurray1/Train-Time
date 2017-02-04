@@ -1,5 +1,5 @@
 var database = firebase.database();
-var trainCommin = database.ref('/Trains')
+var trainComing = database.ref('/Trains')
 var trainName = "";
 var destination = "";
 var nextArrival = "";
@@ -74,10 +74,10 @@ $("#runSearch").on("click", function() {
         $(".table").append("<td>" + childSnapshot.val().frequency + "</td>");
 
 
-        return false
+        return false;
 
     });
-    return false
+    return false;
 
 });
 
@@ -94,8 +94,8 @@ $("#runSearch").on("click", function(event) {
     // Output all of the new information into the Current Train Schedule section
     $("#currentTrainSchedule").append("<td>" + trainName + "</td>");
     $("#currentTrainSchedule").append("<td>" + destination + "</td>");
-    $("#currentTrainSchedule").append("<td>" + nextArrival + "</td>");
-    $("#currentTrainSchedule").append("<td>" + minutesAway + "</td>");
+    $("#currentTrainSchedule").append("<td>" + frequency + "</td>");
+    $("#currentTrainSchedule").append("<td>" + firstTrainTime + "</td>");
 
     // Clear sessionStorage
     sessionStorage.clear();
@@ -103,13 +103,13 @@ $("#runSearch").on("click", function(event) {
     // Store all content into sessionStorage
     sessionStorage.setItem("trainName", trainName);
     sessionStorage.setItem("destination", destination);
-    sessionStorage.setItem("nextArrival", nextArrival);
-    sessionStorage.setItem("minutesAway", minutesAway);
+    sessionStorage.setItem("nextArrival", frequency);
+    sessionStorage.setItem("minutesAway", firstTrainTime);
 });
 
 // By default display the content from sessionStorage
 $("#currentTrainSchedule").empty();
 $("#currentTrainSchedule").append("<td>" + sessionStorage.getItem("trainName"));
 $("#currentTrainSchedule").append("<td>" + sessionStorage.getItem("destination"));
-$("#currentTrainSchedule").append("<td>" + sessionStorage.getItem("nextArrival"));
-$("#currentTrainSchedule").append("<td>" + sessionStorage.getItem("minutesAway"));
+$("#currentTrainSchedule").append("<td>" + sessionStorage.getItem("frequency"));
+$("#currentTrainSchedule").append("<td>" + sessionStorage.getItem("firstTrainTime"));

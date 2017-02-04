@@ -6,6 +6,12 @@
 
 /*Train information row*/
 
+/*Table coloring for every other row*/
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
 
 /*Buttons*/
 
@@ -30,6 +36,7 @@ button#runSearch.btn.btn-default {
     -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
     box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
     text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+    outline: none; /*removed default outline of button*/
 }
 
 button#runSearch.btn.btn-default:hover {
@@ -43,7 +50,7 @@ button#runSearch.btn.btn-default:active {
     background: #3128de;
 }
 
-button#clearAll.btn.btn-default {
+/*button#clearAll.btn.btn-default {
     font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
     font-size: 16px;
     padding: 7px 14px;
@@ -75,4 +82,4 @@ button#clearAll.btn.btn-default:hover {
 button#clearAll.btn.btn-default:active {
     border-top-color: #3128de;
     background: #3128de;
-}
+}*/
